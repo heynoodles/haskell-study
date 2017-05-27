@@ -27,12 +27,20 @@ baseCircle :: Float -> Shape
 baseCircle r = Circle (Point 0 0) r
 
 -- Record Syntax
-data Person = Person {
-	firstName :: String,
-	lastName :: String,
-	age :: Int
-} deriving (Show)
+-- data Person = Person {
+-- 	firstName :: String,
+-- 	lastName :: String,
+-- 	age :: Int
+-- } deriving (Show)
 
 
 -- Type parameters, 类似java中泛型
-data Maybe a = Nothing | Just a
+-- data Maybe a = Nothing | Just a
+
+
+-- Derived instances，类似java接口
+data Person2 = Person2 {
+	firstName :: String,
+	lastName :: String,
+	age :: Int
+} deriving (Eq, Show, Read)
